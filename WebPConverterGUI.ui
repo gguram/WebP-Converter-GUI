@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>480</width>
-    <height>772</height>
+    <width>481</width>
+    <height>792</height>
    </rect>
   </property>
   <property name="acceptDrops">
@@ -166,6 +166,12 @@
      <property name="text">
       <string>Enabled</string>
      </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+     <property name="tristate">
+      <bool>false</bool>
+     </property>
     </widget>
    </widget>
    <widget class="QGroupBox" name="WatermarkGroupBox">
@@ -185,12 +191,25 @@
       <rect>
        <x>10</x>
        <y>30</y>
-       <width>91</width>
+       <width>121</width>
        <height>16</height>
       </rect>
      </property>
      <property name="text">
-      <string>White Font</string>
+      <string>Enable Watermark</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>30</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Options..</string>
      </property>
     </widget>
    </widget>
@@ -198,7 +217,7 @@
     <property name="geometry">
      <rect>
       <x>380</x>
-      <y>700</y>
+      <y>730</y>
       <width>81</width>
       <height>31</height>
      </rect>
@@ -213,7 +232,7 @@
       <x>20</x>
       <y>640</y>
       <width>441</width>
-      <height>61</height>
+      <height>91</height>
      </rect>
     </property>
     <property name="title">
@@ -224,25 +243,86 @@
       <rect>
        <x>10</x>
        <y>30</y>
-       <width>91</width>
+       <width>151</width>
        <height>16</height>
       </rect>
      </property>
      <property name="text">
-      <string>Enabled</string>
+      <string>Enabled Exif Padding</string>
      </property>
     </widget>
-    <widget class="QCheckBox" name="EnableInstaMode">
+    <widget class="QCheckBox" name="EnableSquareMode">
      <property name="geometry">
       <rect>
        <x>120</x>
-       <y>30</y>
+       <y>50</y>
        <width>91</width>
        <height>16</height>
       </rect>
      </property>
      <property name="text">
-      <string>InstaMode</string>
+      <string>SquareMode</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="EnableDarkMode">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>DarkMode</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="FontComboBox">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>60</y>
+       <width>151</width>
+       <height>20</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="SaveFormatBox">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>30</y>
+       <width>76</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>JPEG</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>PNG</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>WebP</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="SaveFormatLabel">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>30</y>
+       <width>81</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>File Format</string>
      </property>
     </widget>
    </widget>
@@ -252,8 +332,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>480</width>
-     <height>21</height>
+     <width>481</width>
+     <height>24</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuOptions">
@@ -261,6 +341,7 @@
      <string>Options</string>
     </property>
     <addaction name="actionAdd_Files"/>
+    <addaction name="actionClear_List"/>
     <addaction name="actionExit"/>
    </widget>
    <addaction name="menuOptions"/>
@@ -282,6 +363,11 @@
   <action name="actionExit">
    <property name="text">
     <string>Exit ...</string>
+   </property>
+  </action>
+  <action name="actionClear_List">
+   <property name="text">
+    <string>Clear List</string>
    </property>
   </action>
  </widget>
